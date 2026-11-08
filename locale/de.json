@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Systemauslastung",
+    "description": "CPU-, GPU- und Speicherauslastung live in der Sitzungskopfzeile"
+  }
+}

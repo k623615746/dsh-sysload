@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>System load meter</title>
+  <rect x="7" y="13" width="50" height="10" rx="5" fill="#247bbf"/>
+  <rect x="7" y="27" width="31" height="10" rx="5" fill="#3f9fe0"/>
+  <rect x="7" y="41" width="41" height="10" rx="5" fill="#7dc2f0"/>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "系统负载监视",
+    "description": "在会话顶栏实时显示 CPU、GPU 与内存占用率"
+  }
+}

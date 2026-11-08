@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Monitor del sistema",
+    "description": "Carga de CPU, GPU y memoria en vivo en la cabecera de la sesión"
+  }
+}

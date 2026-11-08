@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "System monitor",
+    "description": "Live CPU, GPU and memory load in the Session header"
+  }
+}

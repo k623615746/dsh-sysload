@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Moniteur système",
+    "description": "Charge CPU, GPU et mémoire en direct dans l’en-tête de session"
+  }
+}
