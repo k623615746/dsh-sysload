@@ -259,11 +259,19 @@ async function handle(req, res) {
 }
 
 /**
- * Register the sample route on the browser carrier. Without a carrier (a
- * headless composition) there is nothing to serve, so the plugin stays inert.
+ * Wait for the browser carrier before `apply` runs.
+ *
+ * Without this declaration the Loader may activate the plugin before
+ * `webServer` exists; `ctx.get('webServer')` then answers `undefined`, the
+ * function returns early, and the route is never registered — a silent failure
+ * that shows up as a widget stuck on its placeholder. Declaring the dependency
+ * makes the Loader hold the row back until the carrier is ready.
  */
+export const inject = ['webServer']
+
+/** Register the sample route on the browser carrier. */
 export function apply(ctx) {
-  const webServer = ctx.get('webServer')
-  if (webServer === undefined) return
+  const webServer = ctx.webServer ?? ctx.get('webServer')
+  if (webServer === undefined || typeof webServer.register !== 'function') return
   ctx.effect(() => webServer.register({ kind: 'exact', path: ROUTE_PATH, handler: handle }))
 }
